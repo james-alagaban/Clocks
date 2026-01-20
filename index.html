@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Clock - Virtual Assistant</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- First Column: Philippines (full column) -->
+        <div class="column philippines-column-wrapper">
+            <div class="clock-card philippines philippines-column">
+                <div class="country-name">Philippines</div>
+                <div class="timezone">Asia/Manila (PHT)</div>
+                <div class="clock-container">
+                    <canvas class="analog-canvas" id="philippines-analog" width="280" height="280"></canvas>
+                </div>
+                <div class="digital-clock" id="philippines-digital"></div>
+                <div class="date-display" id="philippines-date"></div>
+            </div>
+        </div>
+
+        <!-- Second Column: US, UK, Australia, Canada -->
+        <div class="column">
+            <div class="second-column">
+                <!-- US Clock -->
+                <div class="clock-card us">
+                    <div class="country-name">United States</div>
+                    <div class="timezone">America/New_York (EST/EDT)</div>
+                    <div class="clock-container">
+                        <canvas class="analog-canvas analog-canvas-small" id="us-analog" width="170" height="170"></canvas>
+                    </div>
+                    <div class="digital-clock" id="us-digital"></div>
+                    <div class="date-display" id="us-date"></div>
+                </div>
+
+                <!-- UK Clock -->
+                <div class="clock-card uk">
+                    <div class="country-name">United Kingdom</div>
+                    <div class="timezone">Europe/London (GMT/BST)</div>
+                    <div class="clock-container">
+                        <canvas class="analog-canvas analog-canvas-small" id="uk-analog" width="170" height="170"></canvas>
+                    </div>
+                    <div class="digital-clock" id="uk-digital"></div>
+                    <div class="date-display" id="uk-date"></div>
+                </div>
+
+                <!-- Australia Clock -->
+                <div class="clock-card australia">
+                    <div class="country-name">Australia</div>
+                    <div class="timezone">Australia/Sydney (AEDT/AEST)</div>
+                    <div class="clock-container">
+                        <canvas class="analog-canvas analog-canvas-small" id="australia-analog" width="170" height="170"></canvas>
+                    </div>
+                    <div class="digital-clock" id="australia-digital"></div>
+                    <div class="date-display" id="australia-date"></div>
+                </div>
+
+                <!-- Canada Clock -->
+                <div class="clock-card canada">
+                    <div class="country-name">Canada</div>
+                    <div class="timezone">America/Toronto (EST/EDT)</div>
+                    <div class="clock-container">
+                        <canvas class="analog-canvas analog-canvas-small" id="canada-analog" width="170" height="170"></canvas>
+                    </div>
+                    <div class="digital-clock" id="canada-digital"></div>
+                    <div class="date-display" id="canada-date"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js" defer></script>
+</body>
+</html>
