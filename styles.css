@@ -169,13 +169,60 @@ body {
     white-space: nowrap;
 }
 
+/* --------- Responsive layouts --------- */
 @media (max-width: 1024px) {
     .container {
         grid-template-columns: 1fr;
+        max-width: 100%;
+        height: auto;
     }
-    
+
+    .column {
+        height: auto;
+    }
+
     .second-column {
         grid-template-columns: 1fr;
     }
 }
 
+@media (max-width: 768px) {
+    body {
+        padding: 12px;
+        overflow: auto; /* allow scrolling on small screens */
+    }
+
+    .container {
+        padding: 12px;
+        gap: 16px;
+        height: auto;
+    }
+
+    .clock-card {
+        padding: 20px;
+        gap: 14px;
+    }
+
+    .analog-canvas {
+        width: 220px;
+        height: 220px;
+    }
+
+    .analog-canvas-small {
+        width: 130px;
+        height: 130px;
+    }
+
+    .digital-clock {
+        font-size: 22px;
+        padding: 10px 14px;
+    }
+
+    .second-column .digital-clock {
+        font-size: 20px;
+    }
+
+    .second-column .clock-card {
+        min-height: auto;
+    }
+}
